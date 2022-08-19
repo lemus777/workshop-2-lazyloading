@@ -48,7 +48,9 @@
           Tailwind. It also includes Prettier and automatic publish to GitHub
           pages using GitHub Actions. Learn more:
         </p>
-        <button class="p-3" id="addButton">Agregar imagen</button>
+        <div><button class="p-3" id="addButton">Agregar imagen</button></div>
+        <div><button class="p-3" id="delButton">Limpiar</button></div>
+        
         <div id="images">
         </div>
 
@@ -57,5 +59,15 @@
 
     <!-- Add more scripts here -->
     <script type="module" src="%PUBLIC_URL%/_dist_/index.js"></script>
+    <script>
+      let appendedImages = 0;
+      let loadedImages = 0;
+
+      const printLog = () => {
+        console.log(`⚪ Se han agregado ${appendedImages} imágenes`);
+        console.log(`🟣 Se han cargado ${loadedImages} imágenes`);
+        console.log("---------------------------------------");
+      }
+    </script>
   </body>
 </html>
